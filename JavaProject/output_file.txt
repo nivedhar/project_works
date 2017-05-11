@@ -1,0 +1,6 @@
+STUDENT #: 1 is: "Nive" whose raw scores are: "R" whose raw scores are:  100.0: 90.0: 90.0: 80.0: 70.0: 40.0: 10.0:
+STUDENT #: 2 is: "Arthy" whose raw scores are: "R" whose raw scores are:  100.0: 80.0: 90.0: 80.0: 80.0: 40.0: 50.0:
+STUDENT #: 3 is: "Vidya" whose raw scores are: "R" whose raw scores are:  100.0: 30.0: 90.0: 80.0: 20.0: 40.0: 50.0:
+STUDENT #: 4 is: "Vivek" whose raw scores are: "R" whose raw scores are:  100.0: 80.0: 90.0: 80.0: 80.0: 40.0: 60.0:
+STUDENT #: 5 is: "Nandhi" whose raw scores are: "R" whose raw scores are:  100.0: 80.0: 70.0: 80.0: 10.0: 40.0: 40.0:
+STUDENT #: 6 is: "Ayishu" whose raw scores are: "R." whose raw scores are: "smith" whose raw scores are:  100.0: 90.0: 90.0: 80.0: 60.0: 40.0: 90.0:
