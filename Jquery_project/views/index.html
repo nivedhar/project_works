@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Final project</title>
+        <link rel="stylesheet" href="../assets/css/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    </head>
+
+    <body>
+        <h3>Travel insurance selection tool</h3>
+        <!-- Begin Bread crumb shell -->
+        <div class="breadcrumb">
+            <ul id="pageLink">
+                <li><a href="#homeView">Plans</a></li>
+            </ul>
+        </div>
+        <!-- End Bread crumb shell -->
+
+        <!-- Begin Home screen -->
+        <section id="homeView" class="view">
+            <header><h1>Available plans</h1></header>
+            <article>
+                <div class="content">
+                    <h2><span>Limited Coverage</span></h2>
+                    Limited coverage plan provides the basic protection,
+                    and may not be adequate. It may cost you less, but the coverage
+                    is limited to pre defined clause of fixed amount of charges.
+                    Must read policy details for benefit and coverage details.
+                </div>
+                <div class="taskbar"><button data-targetview="limitedView" data-bc-name="Limited View">Select</button></div>
+            </article>
+
+            <article>
+                <div class="content">
+                    <h2><span>Comprehensive Coverage</span></h2>
+                    These plans offer much better and flexible coverage.
+                    Most of these plans work like PPO type of 80-20% plan.
+                    Means insured have to pay 20% of the cost for the first
+                    $5,000 per policy period policy pays rest 80%.
+                </div>
+                <div class="taskbar"><button data-targetview="comprehensiveView" data-bc-name="Comprehensive View">Select</button></div>
+            </article>
+        </section>
+        <!-- End Home screen -->
+
+        <!-- Begin Limited coverage screen -->
+        <section id="limitedView" class="view">
+            <header><h1>Limited Coverage</h1></header>
+            <article>
+                <div class="herospot">
+                    <div class="hero-item hero-limited">
+                        Limited Plan&nbsp;A
+                    </div>
+                </div>
+                <div class="content-list">
+                    <h2><span>Limited Plan A</span></h2>
+                    Limited Plan A provides basic medical coverage for non-US citizens,
+                    who come to the U.S. for business, pleasure, study or to immigrate with
+                    a maximum coverage of $120,000.
+                </div>
+                <div class="taskbar"><button data-targetview="userFormView" data-bc-name="Personal Details">Select</button></div>
+            </article>
+
+            <article>
+                <div class="herospot">
+                    <div class="hero-item hero-limited">
+                        Limited Plan&nbsp;B
+                    </div>
+                </div>
+                <div class="content-list">
+                    <h2><span>Limited Plan A</span></h2>
+                    Limited Plan B provides basic medical coverage for non-US citizens,
+                    who come to the U.S. for business, pleasure, study or to immigrate with
+                    a maximum coverage of $140,000.
+                </div>
+                <div class="taskbar"><button data-targetview="userFormView" data-bc-name="Personal Details">Select</button></div>
+            </article>
+        </section>
+        <!-- End Limited coverage screen -->
+
+        <!-- Begin Comprehensive coverage screen -->
+        <section id="comprehensiveView" class="view">
+            <header><h1>Comprehensive Coverage</h1></header>
+            <article>
+                <div class="herospot">
+                    <div class="hero-item hero-comprehensive">
+                        Comprehensive Plan&nbsp;A
+                    </div>
+                </div>
+                <div class="content-list">
+                    <h2><span>Comprehensive Plan A</span></h2>
+                    Plan A offers medical coverage and emergency services to individuals
+                    and families travelling outside their home countries.
+                </div>
+                <div class="taskbar"><button data-targetview="userFormView" data-bc-name="Personal Details">Select</button></div>
+            </article>
+
+            <article>
+                <div class="herospot">
+                    <div class="hero-item hero-comprehensive">
+                        Comprehensive Plan&nbsp;B
+                    </div>
+                </div>
+                <div class="content-list">
+                    <h2><span>Comprehensive Plan B</span></h2>
+                    Plan B offers medical coverage and emergency services to individuals
+                    and families travelling outside their home countries.
+                </div>
+                <div class="taskbar"><button data-targetview="userFormView" data-bc-name="Personal Details">Select</button></div>
+            </article>
+
+            <article>
+                <div class="herospot">
+                    <div class="hero-item hero-comprehensive">
+                        Comprehensive Plan&nbsp;C
+                    </div>
+                </div>
+                <div class="content-list">
+                    <h2><span>Comprehensive Plan C</span></h2>
+                    Plan C offers medical coverage and emergency services to individuals
+                    and families travelling outside their home countries.
+                </div>
+                <div class="taskbar"><button data-targetview="userFormView" data-bc-name="Personal Details">Select</button></div>
+            </article>
+        </section>
+        <!-- End Comprehensive coverage screen -->
+
+        <!-- Begin User form -->
+        <section id="userFormView" class="view">
+            <!-- Error Template -->
+            <p id="error" class="showError hide"></p>
+
+            <header><h1>Personal Details</h1></header>
+            <div id="template"></div>
+            <div class="taskbar">
+                <button class="addmore">+</button><button id="formSubmit" data-targetview="thanksView" data-bc-name="Thanks View" class="primary">Submit</button>
+            </div>
+        </section>
+        <!-- End User form -->
+
+        <!-- Begin Thanks View -->
+        <section id="thanksView" class="view">
+            <header><h1>Thanks You</h1></header>
+            <article>
+                <div class="content">
+                    Thank you <span id="name"></span> for enrolling with us!!!
+                </div>
+            </article>
+        </section>
+        <!-- End Thanks View -->
+
+        <!-- Begin template models -->
+        <script id="form-template" type="text/x-template">
+            <article class="form" data-id="%id%">
+                <header><h1>Insured #%id%</h1></header>
+                <h2><span></span><button class="removeform hide" data-id="%id%">-</button></h2>
+                <form>
+                    <ul>
+                        <li>
+                            <span class="key">Name<span> *</span></span>
+                            <input type="text" name="name" class="input value" data-id="%id%" placeholder="Name of insured" required="required"/>
+                        </li>
+                        <li>
+                            <span class="key">Address<span> *</span></span>
+                            <input type="text" name="address1" class="input value" data-id="%id%" placeholder="Address of insured" required="required"/>
+                        </li>
+                        <li>
+                            <span class="key"></span>
+                            <input type="text" name="address2" class="input value" data-id="%id%" placeholder="address contd."/>
+                        </li>
+                        <li>
+                            <span class="key">Start Date<span> *</span></span>
+                            <span class="input date">
+                                <input type="text" name="startDate" readonly='true' class="input value" data-id="%id%" placeholder="Start date" required="required"/>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="key">End Date<span> *</span></span>
+                            <span class="input date">
+                                <input type="text" name="endDate" readonly='true' class="input value" data-id="%id%" placeholder="End date" required="required"/>
+                            </span>
+                        </li>
+                    </ul>
+                </form>
+            </article>
+        </script>
+        <!-- End template models -->
+    </body>
+    <script type="text/javascript" src="../assets/js/lib/jquery.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/jquery-ui.js"></script>
+    <script type="text/javascript" src="../assets/js/index.js"></script>
+</html>
